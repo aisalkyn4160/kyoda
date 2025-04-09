@@ -1,0 +1,293 @@
+@import url('header-style.css');
+@import url('banner.css');
+@import url('news.css');
+@import url('reviews.css');
+@import url('about.css');
+@import url('breadcrumbs.css');
+@import url('catalog.css');
+@import url('feedback.css');
+@import url('partners.css');
+@import url('default-page.css');
+@import url('categories.css');
+@import url('products.css');
+@import url('product.css');
+@import url('footer-style.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+/* -------------------------------------------reset-styles------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none; color: inherit;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+
+h1,h2, h3, h4, h5, h6{font-style: inherit;}
+
+/* -------------------------------------------main-styles------------------------------------------- */
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Manrope', sans-serif;
+	background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.no-scroll{
+	overflow: hidden;
+}
+.layout{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+header{
+	flex-shrink: 0;
+}
+
+main{
+	flex-grow: 1;
+}
+
+footer{
+	/* background-color: black; */
+	flex-shrink: 0;
+}
+
+.container{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+	border: 1px solid red;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0p;
+    margin-bottom: 24px;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+}
+
+h6 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0;
+    margin-bottom: 24px;
+    color: #7A7A7A;
+}
+
+.btn{
+    background: #FF6701;
+    padding: 14px 24px 17px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #FFFFFF !important;
+    white-space: nowrap;
+
+}
+.swiper{
+    height: auto;
+}
+.swiper-slide{
+    height: auto;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: -25px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: -25px;
+}
+.swiper-button-next svg, .swiper-button-prev svg{
+    width: 24px;
+    height: 24px;
+}
+/* Мобильная шапка */
+@media (max-width: 768px) {
+    .header_top {
+        display: none;
+    }
+
+    .header_middle__content {
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 80px 20px 20px;
+        transition: left 0.3s ease;
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 18px;
+        color: white;
+    }
+
+    .header-burger {
+        display: block;
+        position: relative;
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    .header-burger.active svg path {
+        stroke: white;
+    }
+
+    .header_middle-logo {
+        position: relative;
+        z-index: 101;
+    }
+
+    .header_middle-cart {
+        position: relative;
+        z-index: 101;
+    }
+
+    /* Анимация для меню */
+    .nav-menu ul li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.active ul li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Добавляем задержку для каждого пункта меню */
+    .nav-menu ul li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-menu ul li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-menu ul li:nth-child(3) { transition-delay: 0.3s; }
+    .nav-menu ul li:nth-child(4) { transition-delay: 0.4s; }
+    .nav-menu ul li:nth-child(5) { transition-delay: 0.5s; }
+}
+
+/* Добавьте это в основной файл стилей */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+/* Базовые стили для меню */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #EB5757;
+}

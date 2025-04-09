@@ -1,0 +1,39 @@
+.reviews{
+    padding: 120px 0;
+    position:relative;
+}
+
+.reviews_list{
+    position: relative;
+}
+.reviews_head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.reviews_item{
+    border: 1px solid #EEEEEE;
+    padding: 32px 48px;
+    height: 100%;
+
+}
+.reviews_item-date{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+}
+.review-logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(122, 122, 122, 1);
+}
+.show-more{
+    display: block;
+    color: rgba(255, 103, 1, 1);
+    text-decoration: underline;
+    margin-bottom: 24px;
+}
