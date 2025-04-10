@@ -11,6 +11,7 @@
 @import url('categories.css');
 @import url('products.css');
 @import url('product.css');
+@import url('places.css');
 @import url('footer-style.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
@@ -20,6 +21,10 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
 }
 
 *, *:before, *:after{
@@ -160,6 +165,7 @@ p {
     letter-spacing: 0;
     color: #FFFFFF !important;
     white-space: nowrap;
+    border: 1px solid #FF6701;
 
 }
 .swiper{

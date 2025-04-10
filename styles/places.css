@@ -1,0 +1,72 @@
+.places{
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 525px 1fr;
+}
+.places-left{
+    height: 100%;
+    overflow: hidden;
+}
+.dealers{
+    height: 500px;
+    overflow-y: scroll;
+}
+.dealers-header{
+    width: max-content;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: #FF6701;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border-bottom: 2px solid #FF6701;
+}
+.dealers-item{
+    padding: 24px 90px 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+.dealers-item:not(:first-child){
+    padding-bottom: 32px;
+}
+.dealers-item h5{
+    font-weight: 800;
+}
+.dealers-item span{
+    display: block;
+    color: #FFC59E;
+}
+.online-stores{
+    height: calc(100vh - 500px);
+    overflow-y: scroll;
+}
+.online-stores_head{
+    padding: 20px 90px;
+    background-color: #FF6701;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.online-stores_item{
+    padding: 24px 90px;
+}
+.online-stores_item h5{
+    color: #FF6701;
+    font-weight: 800;
+}
+.online-stores_item span{
+    display: block;
+    color: #FFC59E;
+}
+.online-stores_item div{
+    margin-bottom: 16px;
+}

@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KYODA</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="styles/style.css">    
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div class="layout page-content">
@@ -81,7 +79,181 @@
                <section class="products">
                     <h2>Воблеры</h2>
                     <div class="products_content">
-                        <div class="products_content-right">Filter</div>
+                        <div class="products_content-right">
+                            <form class="products-filter">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Цена, ₽
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                                            <path d="M19.1198 1.12003C19.6098 1.61003 19.6098 2.40003 19.1198 2.89003L10.7098 11.3C10.3198 11.69 9.68981 11.69 9.2998 11.3L0.889804 2.89003C0.399805 2.40003 0.399805 1.61003 0.889804 1.12003C1.3798 0.630031 2.16981 0.630031 2.6598 1.12003L9.9998 8.46003L17.3498 1.11003C17.8398 0.630031 18.6298 0.630031 19.1198 1.12003Z" fill="#CCCCCC"/>
+                                        </svg>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <div>
+                                            <div class="price-input">
+                                                <div class="field">
+                                                    <span>Min</span>
+                                                    <input type="number" class="input-min" value="2500">
+                                                </div>
+                                                <div class="separator">-</div>
+                                                <div class="field">
+                                                    <span>Max</span>
+                                                    <input type="number" class="input-max" value="7500">
+                                                </div>
+                                            </div>
+                                            <div class="slider">
+                                                <div class="progress"></div>
+                                            </div>
+                                            <div class="range-input">
+                                                <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                                                <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Мощность, кВт
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                                            <path d="M19.1198 1.12003C19.6098 1.61003 19.6098 2.40003 19.1198 2.89003L10.7098 11.3C10.3198 11.69 9.68981 11.69 9.2998 11.3L0.889804 2.89003C0.399805 2.40003 0.399805 1.61003 0.889804 1.12003C1.3798 0.630031 2.16981 0.630031 2.6598 1.12003L9.9998 8.46003L17.3498 1.11003C17.8398 0.630031 18.6298 0.630031 19.1198 1.12003Z" fill="#CCCCCC"/>
+                                        </svg>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <label>
+                                           <div class="products-filter_checkbox">
+                                               <input type="checkbox" >
+                                               <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                           </div>
+                                            <span>Ручной</span>
+                                        </label>
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Ручной + электростартер</span>
+                                        </label>
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Электростартер</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Запуск двигателя
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                                            <path d="M19.1198 1.12003C19.6098 1.61003 19.6098 2.40003 19.1198 2.89003L10.7098 11.3C10.3198 11.69 9.68981 11.69 9.2998 11.3L0.889804 2.89003C0.399805 2.40003 0.399805 1.61003 0.889804 1.12003C1.3798 0.630031 2.16981 0.630031 2.6598 1.12003L9.9998 8.46003L17.3498 1.11003C17.8398 0.630031 18.6298 0.630031 19.1198 1.12003Z" fill="#CCCCCC"/>
+                                        </svg>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Ручной + электростартер</span>
+                                        </label>
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Электростартер</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Система управления
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                                            <path d="M19.1198 1.12003C19.6098 1.61003 19.6098 2.40003 19.1198 2.89003L10.7098 11.3C10.3198 11.69 9.68981 11.69 9.2998 11.3L0.889804 2.89003C0.399805 2.40003 0.399805 1.61003 0.889804 1.12003C1.3798 0.630031 2.16981 0.630031 2.6598 1.12003L9.9998 8.46003L17.3498 1.11003C17.8398 0.630031 18.6298 0.630031 19.1198 1.12003Z" fill="#CCCCCC"/>
+                                        </svg>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Ручной + электростартер</span>
+                                        </label>
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Электростартер</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Электромотор
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
+                                            <path d="M19.1198 1.12003C19.6098 1.61003 19.6098 2.40003 19.1198 2.89003L10.7098 11.3C10.3198 11.69 9.68981 11.69 9.2998 11.3L0.889804 2.89003C0.399805 2.40003 0.399805 1.61003 0.889804 1.12003C1.3798 0.630031 2.16981 0.630031 2.6598 1.12003L9.9998 8.46003L17.3498 1.11003C17.8398 0.630031 18.6298 0.630031 19.1198 1.12003Z" fill="#CCCCCC"/>
+                                        </svg>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Ручной + электростартер</span>
+                                        </label>
+                                        <label>
+                                            <div class="products-filter_checkbox">
+                                                <input type="checkbox" >
+                                                <span class="checkmark">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                                    <path d="M11.9902 2.00008L10.5802 0.580078L3.99023 7.17008L1.41023 4.60008L-0.00976562 6.01008L3.99023 10.0001L11.9902 2.00008Z" fill="white"/>
+                                                    </svg>
+                                               </span>
+                                            </div>
+                                            <span>Электростартер</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn" type="submit">Принять</button>
+                                <button class="btn reset-btn" type="reset">Сбросить</button>
+                            </form>
+                        </div>
                         <div class="products_content-left">
                             <div class="products-tags">
                                 <a href="#" class="products-tag active">Все воблеры</a>
@@ -153,7 +325,7 @@
                                     </a>
                                     <div class="products-item__content">
                                         <div class="products-item__title">
-                                            <a href="#">Воблер KYODA SHARP MINNOW-75F</a>
+                                            <a href="#">А Воблер KYODA SHARP MINNOW-75F</a>
                                         </div>
                                         <div class="products-item__description">
                                             Вкладыш мех, цвет олива, размер 44 (3 пар/кор.)
@@ -167,7 +339,7 @@
                                     </a>
                                     <div class="products-item__content">
                                         <div class="products-item__title">
-                                            <a href="#">Воблер KYODA SHARP MINNOW-75F</a>
+                                            <a href="#">С Воблер KYODA SHARP MINNOW-75F</a>
                                         </div>
                                         <div class="products-item__description">
                                             <div class="product-characteristic__list">
@@ -636,10 +808,8 @@
         </div>
     </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="priceRangeSlider.js"></script>
+<!--    <script src="script.js"></script>-->
     <script src="products.js"></script>
 </body>
 </html>

@@ -38,34 +38,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Аккордеон (оставляем существующий код)
-    const firstAccordionItem = document.querySelector('.accordion-item');
-    if (firstAccordionItem) {
-        const firstAccordionContent = firstAccordionItem.querySelector('.accordion-content');
-        firstAccordionItem.classList.add('active');
-        firstAccordionContent.style.maxHeight = firstAccordionContent.scrollHeight + "px";
-    }
+    // const firstAccordionItem = document.querySelector('.accordion-item');
+    // if (firstAccordionItem) {
+    //     const firstAccordionContent = firstAccordionItem.querySelector('.accordion-content');
+    //     firstAccordionItem.classList.add('active');
+    //     firstAccordionContent.style.maxHeight = firstAccordionContent.scrollHeight + "px";
+    // }
 
-    document.querySelectorAll('.accordion-header').forEach(button => {
-        button.addEventListener('click', () => {
-            const accordionItem = button.parentElement;
-            const accordionContent = accordionItem.querySelector('.accordion-content');
 
-            if (accordionItem.classList.contains('active')) {
-                return;
-            }
-
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-                const content = item.querySelector('.accordion-content');
-                content.style.maxHeight = "0";
-            });
-
-            accordionItem.classList.add('active');
-            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
-        });
-    });
 });
 
+document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionItem = button.parentElement;
+        const accordionContent = accordionItem.querySelector('.accordion-content');
+
+
+
+        // if (accordionItem.classList.contains('active')) {
+        //     return;
+        // }
+
+        // document.querySelectorAll('.accordion-item').forEach(item => {
+        //     item.classList.remove('active');
+        //     const content = item.querySelector('.accordion-content');
+        //     content.style.maxHeight = "0";
+        // });
+
+        accordionItem.classList.toggle('active');
+        if(accordionItem.classList.contains('active')){
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+        }else{
+            accordionContent.style.maxHeight = '0';
+
+        }
+
+
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const newsSlider = new Swiper('.news-swiper', {
@@ -154,7 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
         })
-    })
+    });
+
 });
 
 
