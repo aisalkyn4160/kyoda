@@ -25,8 +25,32 @@
 }
 .products-sorter{
     display: flex;
+    align-items: center;
     column-gap: 19px;
     margin-bottom: 28px;
+    color: #B2B2B2;
+}
+.products-sorter .name-sorter,
+.products-sorter .price-sorter{
+    color: #1D1D1D;
+    font-weight: 600;
+}
+.name-sorter,
+.price-sorter{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.sorter-arrows{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sorter-arrows svg{
+    cursor: pointer;
+}
+svg.active path{
+    fill: #FF6701;
 }
 .products-list {
     display: grid;

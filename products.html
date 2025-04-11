@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KYODA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.7.0/distribute/nouislider.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -89,24 +90,21 @@
                                         </svg>
                                     </div>
                                     <div class="accordion-content">
-                                        <div>
-                                            <div class="price-input">
-                                                <div class="field">
-                                                    <span>Min</span>
-                                                    <input type="number" class="input-min" value="2500">
+                                        <div class="price-slider-range">
+                                            <div class="price-slider">
+                                                <div class="slider-header">
+                                                    <div class="price-inputs">
+                                                        <div class="input-group">
+                                                            <label>От</label>
+                                                            <input type="number" class="min-price" value="0">
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <label>До</label>
+                                                            <input type="number" class="max-price" value="100000">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="separator">-</div>
-                                                <div class="field">
-                                                    <span>Max</span>
-                                                    <input type="number" class="input-max" value="7500">
-                                                </div>
-                                            </div>
-                                            <div class="slider">
-                                                <div class="progress"></div>
-                                            </div>
-                                            <div class="range-input">
-                                                <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-                                                <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                                                <div id="price-range"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -272,11 +270,29 @@
                             </div>
                             <div class="products-sorter">
                                 <div>Сортировать:</div>
-                                <a href="#">Название</a>
-                                <a href="#">Цена</a>
+                                <div class="name-sorter">Название 
+                                    <div class="sorter-arrows">
+                                        <svg  id='name-sorter-arrow-up' xmlns="http://www.w3.org/2000/svg" width="7" height="4" viewBox="0 0 7 4" fill="none">
+                                            <path d="M6.93066 3.65073H3.46549H0.000317842L3.46549 1.30975e-07L6.93066 3.65073Z" fill="#1D1D1D"/>
+                                        </svg>
+                                        <svg id='name-sorter-arrow-down' xmlns="http://www.w3.org/2000/svg" width="7" height="4" viewBox="0 0 7 4" fill="none">
+                                            <path d="M0.0703125 0.349243H3.53549H7.00066L3.53549 3.99997L0.0703125 0.349243Z" fill="#1D1D1D"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="price-sorter">Цена
+                                    <div class="sorter-arrows">
+                                        <svg id='price-sorter-arrow-up' xmlns="http://www.w3.org/2000/svg" width="7" height="4" viewBox="0 0 7 4" fill="none">
+                                            <path d="M6.93066 3.65073H3.46549H0.000317842L3.46549 1.30975e-07L6.93066 3.65073Z" fill="#1D1D1D"/>
+                                        </svg>
+                                        <svg id='price-sorter-arrow-down' xmlns="http://www.w3.org/2000/svg" width="7" height="4" viewBox="0 0 7 4" fill="none">
+                                            <path d="M0.0703125 0.349243H3.53549H7.00066L3.53549 3.99997L0.0703125 0.349243Z" fill="#1D1D1D"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                             <div class="products-list" id="products-list" data-current-page="1" aria-live="polite">
-                                <div class="products-item">
+                                <div class="products-item" data-price="100">
                                     <a href="product.html" class="products-item__img">
                                         <img src="assets/imgs/Rectangle%2034.png" alt="Воблер KYODA SHARP MINNOW-75F">
                                     </a>
@@ -319,7 +335,7 @@
                                         <a href="#" class="products-item__link">Подробнее</a>
                                     </div>
                                 </div>
-                                <div class="products-item">
+                                <div class="products-item" data-price="300">
                                     <a href="#" class="products-item__img">
                                         <img src="assets/imgs/Rectangle%2034.png" alt="Воблер KYODA SHARP MINNOW-75F">
                                     </a>
@@ -333,13 +349,13 @@
                                         <a href="#" class="products-item__link">Подробнее</a>
                                     </div>
                                 </div>
-                                <div class="products-item">
+                                <div class="products-item" data-price="200">
                                     <a href="#" class="products-item__img">
                                         <img src="assets/imgs/Rectangle%2034.png" alt="Воблер KYODA SHARP MINNOW-75F">
                                     </a>
                                     <div class="products-item__content">
                                         <div class="products-item__title">
-                                            <a href="#">С Воблер KYODA SHARP MINNOW-75F</a>
+                                            <a href="#">Б Воблер KYODA SHARP MINNOW-75F</a>
                                         </div>
                                         <div class="products-item__description">
                                             <div class="product-characteristic__list">
@@ -382,7 +398,7 @@
                                     </a>
                                     <div class="products-item__content">
                                         <div class="products-item__title">
-                                            <a href="#">Воблер KYODA SHARP MINNOW-75F</a>
+                                            <a href="#">В Воблер KYODA SHARP MINNOW-75F</a>
                                         </div>
                                         <div class="products-item__description">
                                             Вкладыш мех, цвет олива, размер 44 (3 пар/кор.)
@@ -808,8 +824,10 @@
         </div>
     </footer>
     </div>
-    <script src="priceRangeSlider.js"></script>
-<!--    <script src="script.js"></script>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@14.7.0/distribute/nouislider.min.js"></script>
     <script src="products.js"></script>
+    <!-- <script src="script.js"></script> -->
+   
 </body>
 </html>

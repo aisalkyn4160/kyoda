@@ -1,0 +1,67 @@
+/* Стили для фильтра по цене */
+  .price-inputs {
+    display: flex;
+    margin: 15px 0 30px;
+  }
+  
+  .input-group {
+    flex: 1;
+    padding: 9px;
+    border: 1px solid #E8E8E8;
+    display: flex;
+  }
+  
+  .input-group label {
+    color: #B2B2B2;
+    padding-right: 6px;
+  }
+  
+  .input-group input {
+    width: 100%;
+  }
+  
+  /* Стили для noUiSlider */
+  #price-range {
+    height: 2px;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .noUi-connect {
+    background: #FF6701;
+  }
+  .noUi-connect, .noUi-origin{
+    right: 10px;
+  }
+  .noUi-origin{
+    width: 9.6%;
+  }
+  .noUi-connect, .noUi-origin:first-child{
+    right: 0px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #FF6701;
+    border: none;
+    cursor: pointer;
+    right: -13px;
+    box-shadow: none;
+  }
+
+  .noUi-horizontal .noUi-handle:before,
+  .noUi-horizontal .noUi-handle:after {
+    display: none;
+  }
+  
+  .noUi-handle:focus {
+    outline: none;
+  }
+  
+  .noUi-target {
+    border: none;
+    background-color: #ddd;
+    box-shadow: none;
+  }
+  

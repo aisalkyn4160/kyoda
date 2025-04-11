@@ -1,3 +1,48 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Получаем элементы
+    const slider = document.getElementById('price-range');
+    const minInput = document.querySelector('.min-price');
+    const maxInput = document.querySelector('.max-price');
+    
+    // Создаем слайдер
+    noUiSlider.create(slider, {
+        start: [200, 35999],
+        connect: true,
+        step: 100,
+        range: {
+            'min': 200,
+            'max': 35999
+        },
+        format: {
+            to: function(value) {
+                return Math.round(value);
+            },
+            from: function(value) {
+                return Number(value);
+            }
+        }
+    });
+    
+    // Обновляем инпуты при движении слайдера
+    slider.noUiSlider.on('update', function(values, handle) {
+        if (handle === 0) {
+            minInput.value = values[0];
+        } else {
+            maxInput.value = values[1];
+        }
+    });
+    
+    // Обновляем слайдер при изменении инпутов
+    minInput.addEventListener('change', function() {
+        slider.noUiSlider.set([this.value, null]);
+    });
+    
+    maxInput.addEventListener('change', function() {
+        slider.noUiSlider.set([null, this.value]);
+    });
+});
+
+
 // -----------pagination
 document.addEventListener('DOMContentLoaded', function(){
     const paginationNumbers = document.getElementById("pagination-numbers");
@@ -117,3 +162,82 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 })
 
+const nameSorterUp = document.getElementById('name-sorter-arrow-up')
+const nameSorterDown = document.getElementById('name-sorter-arrow-down')
+
+const priceSorterUp = document.getElementById('price-sorter-arrow-up')
+const priceSorterDown = document.getElementById('price-sorter-arrow-down')
+
+const productList = document.getElementById("products-list");
+
+const listItems = Array.from(productList.children);
+
+
+
+
+nameSorterUp.addEventListener('click', () => {
+    nameSorterUp.classList.add('active');
+    nameSorterDown.classList.remove('active');
+    nameSorterUp.parentNode.parentNode.style.color = '#FF6701';
+
+    listItems.sort((a, b) => {
+        const nameA = a.querySelector('.products-item__title').textContent.toLowerCase();
+        const nameB = b.querySelector('.products-item__title').textContent.toLowerCase();
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
+        return 0;
+    });
+   
+    updateProductsList(listItems);
+});
+
+nameSorterDown.addEventListener('click', () => {    
+
+    listItems.sort((a, b) => {
+        const nameA = a.querySelector('.products-item__title').textContent.toLowerCase();
+        const nameB = b.querySelector('.products-item__title').textContent.toLowerCase();
+
+        if (nameA < nameB) return 1;
+        if (nameA > nameB) return -1;
+        return 0;
+    });
+   
+    updateProductsList(listItems);
+}); 
+
+
+priceSorterUp.addEventListener('click', () => {
+    listItems.sort((a, b) => {
+        const priceA = parseInt(a.dataset.price)
+        const priceB = parseFloat(b.dataset.price)
+
+        if (priceA < priceB) return -1;
+        if (priceA > priceB) return 1;
+        return 0;
+        
+    });
+   
+   updateProductsList(listItems)
+});
+
+priceSorterDown.addEventListener('click', () => {
+    listItems.sort((a, b) => {
+        const priceA = parseInt(a.dataset.price)
+        const priceB = parseFloat(b.dataset.price)
+
+        if (priceA < priceB) return 1;
+        if (priceA > priceB) return -1;
+        return 0;
+        
+    });
+   
+   updateProductsList(listItems)
+});     
+
+
+function updateProductsList(sorterProducts) {
+    productList.innerHTML = '';
+    sorterProducts.forEach(item => {
+        productList.appendChild(item);
+    });
+}
