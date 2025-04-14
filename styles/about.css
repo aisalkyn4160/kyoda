@@ -84,8 +84,9 @@
     grid-template-columns: 204px 1fr;
 
     svg{
+        width: 180px;
         flex-shrink: 0;
-        margin-top: 60px;
+        margin-top: 40px;
     }
 }
 .history-item{
@@ -100,11 +101,14 @@
     padding-top: 0;
 }
 .history-item-wrap:first-child svg{
-    margin-top: -8px;
+    margin-top: -25px;
 }
 .history-item-wrap:last-child .history-item{
     border-bottom: none;
     padding-bottom: 0;
+}
+.history-item-wrap svg path{
+    fill: #FF6701;
 }
 
 .about_map{

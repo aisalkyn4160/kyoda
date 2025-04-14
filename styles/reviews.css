@@ -33,7 +33,7 @@
 }
 .show-more{
     display: block;
-    color: rgba(255, 103, 1, 1);
+    color: rgba(255, 103, 1, 1) !important;
     text-decoration: underline;
     margin-bottom: 24px;
 }

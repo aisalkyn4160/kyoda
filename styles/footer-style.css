@@ -22,6 +22,12 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
 }
+.footer li{
+    transition: .3s ease;
+}
+.footer li:hover{
+    color: #FF6701 !important;
+}
 .footer-content_middle{
     display: flex;
     gap: 120px;

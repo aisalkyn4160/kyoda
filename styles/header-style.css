@@ -28,11 +28,17 @@
 	height: 47px;
 	background: transparent;
 	color: #fff;
-	border: 1px solid rgba(255, 255, 255, 0.5)
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	transition: .3s ease;
 }
+
 .page-content .header .btn{
 	color: #1D1D1D !important;
 	border: 1px solid #E8E8E8;
+}
+.page-content .header .btn:hover{
+	color: #FF6701 !important;
+	border-color: #FF6701;
 }
 .catalog-menu{
 	height: 47px;
@@ -40,20 +46,20 @@
 	background-color: rgba(255, 103, 1, 1);
 	font-weight: 600;
 	line-height: 100%;
-	letter-spacing: 0%;
+	letter-spacing: 0;
 	color: #FFFFFF;
 	cursor: pointer;
-	
 }
-.catalog-menu > a{
+.catalog-menu >ul>li>a{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 12px;
 	line-height: 120%;
 }
-.has-menu{
-	/* position: relative; */
+.categories{
+	border-right: 5px solid green;
+	overflow: hidden;
 }
 .sub-menu{
 	position: absolute;
@@ -127,6 +133,7 @@
 	padding-left: 80px;
 	border-left: 1px solid #EBEBEB;
 	font-weight: 400;
+	min-height: 530px;
 	display: none;
 }
 .sub-menu-item.has-menu:hover .item-sub-menu{
@@ -155,12 +162,16 @@
 	font-size: 16px;
 	line-height: 100%;
 }
+.page-content .search input{
+	color: #252525;
+}
 .search input::placeholder{
 	color: #fff;
 }
 .page-content .search input::placeholder{
 	color: #B2B2B2;
 }
+
 .search button{
 	position: absolute;
 	top: 50%;
@@ -173,7 +184,9 @@
 	background: unset;
 	cursor: pointer;
 }
-
+.page-content .search svg path{
+	stroke: #B2B2B2;
+}
 .menu{
 	margin: 0 auto;
 }
@@ -191,4 +204,8 @@
 }
 .menu ul li{
 	margin-bottom: 0;
+	transition: .3s ease;
+}
+.menu ul li:hover{
+	color: #FF6701;
 }

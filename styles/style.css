@@ -53,7 +53,7 @@ input::-ms-clear{display:none;}
 button{cursor: pointer;}
 button::-moz-focus-inner{padding: 0;border: 0;}
 a, a:visited{text-decoration: none; color: inherit;}
-a:hover{text-decoration: none;}
+/*a:hover{text-decoration: none;}*/
 ul li{list-style-type: none;}
 
 h1,h2, h3, h4, h5, h6{font-style: inherit;}
@@ -167,7 +167,12 @@ p {
     color: #FFFFFF !important;
     white-space: nowrap;
     border: 1px solid #FF6701;
-
+    transition: .3s ease;
+}
+.btn:hover{
+    border-color: #FF6701;
+    color: #FF6701 !important;
+    background: transparent;
 }
 .swiper{
     height: auto;
@@ -197,6 +202,67 @@ p {
 .swiper-button-next svg, .swiper-button-prev svg{
     width: 24px;
     height: 24px;
+}
+
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup.show-popup{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.popup form{
+    max-width: 600px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 56px 48px;
+    position: relative;
+    text-align: center;
+}
+.popup form .close-form{
+    position: absolute;
+    top: 40px;
+    right: 18px;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 0;
+    transform: rotate(45deg);
+    color: #252525;
+}
+.popup h4{
+    margin-bottom: 0px;
+}
+.popup p{
+    margin-bottom: 18px;
+}
+.popup form input,
+.popup form button{
+    width: 100%;
+    padding: 14px 24px;
+    border: 1px solid #D3D3D3;
+}
+.popup .form-checkbox{
+    font-size: 14px;
+    color: #7A7A7A;
+    align-self: flex-start;
+    text-align: left;
 }
 /* Мобильная шапка */
 @media (max-width: 768px) {

@@ -35,6 +35,7 @@
 }
 .categories-item__title h4 a{
     position: relative;
+    transition: .3s ease;
 }
 .categories-item__title h4 a:before{
     content: '';
@@ -46,4 +47,7 @@
     left: 20px;
     transform: skewX(-30deg) rotate(70deg);
     z-index: -1;
+}
+.categories-item__title:hover h4{
+    color: #FF6701;
 }

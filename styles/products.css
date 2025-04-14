@@ -41,6 +41,26 @@
     align-items: center;
     gap: 6px;
 }
+.name-sorter.clicked{
+    color: #FF6701;
+}
+.name-sorter.clicked svg path{
+    fill: #B2B2B2;
+}
+.name-sorter.clicked svg.clicked path{
+    fill: #FF6701;
+}
+
+
+.price-sorter.clicked{
+    color: #FF6701;
+}
+.price-sorter.clicked svg path{
+    fill: #B2B2B2;
+}
+.price-sorter.clicked svg.clicked path{
+    fill: #FF6701;
+}
 .sorter-arrows{
     display: flex;
     flex-direction: column;
@@ -48,9 +68,6 @@
 }
 .sorter-arrows svg{
     cursor: pointer;
-}
-svg.active path{
-    fill: #FF6701;
 }
 .products-list {
     display: grid;
@@ -152,6 +169,11 @@ svg.active path{
     height: 40px;
     background-color: transparent;
     font-weight: 600;
+    border: 1px solid transparent;
+    transition: .3s ease;
+}
+.pagination-number:hover{
+    border: 1px solid #FF6701;
 }
 .pagination-number.active{
     background-color: #FF6701;
@@ -174,6 +196,7 @@ svg.active path{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .accordion-header svg{
     transition: .3s ease;

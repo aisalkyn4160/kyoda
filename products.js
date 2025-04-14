@@ -162,9 +162,11 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 })
 
+const nameSorter = document.querySelector('.name-sorter')
 const nameSorterUp = document.getElementById('name-sorter-arrow-up')
 const nameSorterDown = document.getElementById('name-sorter-arrow-down')
 
+const priceSorter = document.querySelector('.price-sorter')
 const priceSorterUp = document.getElementById('price-sorter-arrow-up')
 const priceSorterDown = document.getElementById('price-sorter-arrow-down')
 
@@ -176,9 +178,10 @@ const listItems = Array.from(productList.children);
 
 
 nameSorterUp.addEventListener('click', () => {
-    nameSorterUp.classList.add('active');
-    nameSorterDown.classList.remove('active');
-    nameSorterUp.parentNode.parentNode.style.color = '#FF6701';
+    nameSorterUp.classList.add('clicked');
+    nameSorterDown.classList.remove('clicked');
+    nameSorter.classList.add('clicked')
+    // nameSorterUp.parentNode.parentNode.style.color = '#FF6701';
 
     listItems.sort((a, b) => {
         const nameA = a.querySelector('.products-item__title').textContent.toLowerCase();
@@ -192,6 +195,9 @@ nameSorterUp.addEventListener('click', () => {
 });
 
 nameSorterDown.addEventListener('click', () => {    
+    nameSorterDown.classList.add('clicked');
+    nameSorterUp.classList.remove('clicked');
+    nameSorter.classList.add('clicked');
 
     listItems.sort((a, b) => {
         const nameA = a.querySelector('.products-item__title').textContent.toLowerCase();
@@ -207,6 +213,10 @@ nameSorterDown.addEventListener('click', () => {
 
 
 priceSorterUp.addEventListener('click', () => {
+    priceSorter.classList.add('clicked');
+    priceSorterUp.classList.add('clicked');
+    priceSorterDown.classList.remove('clicked');
+
     listItems.sort((a, b) => {
         const priceA = parseInt(a.dataset.price)
         const priceB = parseFloat(b.dataset.price)
@@ -221,6 +231,10 @@ priceSorterUp.addEventListener('click', () => {
 });
 
 priceSorterDown.addEventListener('click', () => {
+    priceSorter.classList.add('clicked');
+    priceSorterUp.classList.remove('clicked');
+    priceSorterDown.classList.add('clicked');
+
     listItems.sort((a, b) => {
         const priceA = parseInt(a.dataset.price)
         const priceB = parseFloat(b.dataset.price)
