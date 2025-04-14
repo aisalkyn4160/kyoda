@@ -108,16 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
         speed: 400,
         loop: true,
         breakpoints: {
-            // when window width is >= 320px
             320: {
-                slidesPerView: 3,
+                slidesPerView: 1.4,
+                spaceBetween: 8,
             },
-            // when window width is >= 480px
-            1200: {
-                slidesPerView: 3,
+            550: {
+                slidesPerView: 2,
             },
-            // when window width is >= 640px
-            1400: {
+            767: {
                 slidesPerView: 3,
             }
         },
@@ -135,14 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 2,
+                slidesPerView: 1.4,
+                spaceBetween: 8,
             },
-            // when window width is >= 480px
-            1200: {
-                slidesPerView: 2,
-            },
-            // when window width is >= 640px
-            1400: {
+            767: {
                 slidesPerView: 2,
             }
         },

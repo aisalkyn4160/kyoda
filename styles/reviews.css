@@ -2,7 +2,9 @@
     padding: 120px 0;
     position:relative;
 }
-
+.reviews h2{
+    margin-bottom: 0;
+}
 .reviews_list{
     position: relative;
 }
@@ -25,6 +27,13 @@
     letter-spacing: 0;
     margin-bottom: 8px;
 }
+.reviews_item p{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .review-logo{
     display: flex;
     align-items: center;
@@ -36,4 +45,33 @@
     color: rgba(255, 103, 1, 1) !important;
     text-decoration: underline;
     margin-bottom: 24px;
+}
+
+@media (max-width: 550px) {
+    .reviews{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 130px;
+    }
+    .reviews .btn{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .reviews-heading{
+        margin-bottom: 20px;
+    }
+    .reviews_item{
+        padding: 20px;
+    }
+    .news-item__text {
+        font-size: 18px;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+    .reviews-btn-prev,
+    .reviews-btn-next{
+        display: none;
+    }
 }

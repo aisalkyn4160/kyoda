@@ -31,3 +31,10 @@
     margin-bottom: 40px;
     color: #FFFFFF;
 }
+
+@media (max-width: 767px) {
+    .catalog{
+        grid-template-columns: 1fr;
+    }
+    
+}

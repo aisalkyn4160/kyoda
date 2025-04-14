@@ -7,7 +7,9 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.news-heading h2{
+    margin-bottom: 0;
+}
 .news-list{
     position: relative;
 }
@@ -98,4 +100,34 @@
 }
 .news-option.selected svg path{
     fill: #FF6701;
+}
+
+
+@media (max-width: 550px) {
+    .news{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    .news .btn{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .news-heading{
+        margin-bottom: 20px;
+    }
+    .news-item__content{
+        padding: 20px;
+    }
+    .news-item__text {
+        font-size: 18px;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+    .news-btn-prev,
+    .news-btn-next{
+        display: none;
+    }
 }
