@@ -19,3 +19,22 @@
     gap: 40px;
 
 }
+
+@media (max-width: 600px) {
+    .default{
+        padding-bottom: 50px;
+    }
+    .default h2{
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    .default-img{
+        width: unset;
+        aspect-ratio: unset;
+        height: 340px;
+        margin: 0 -15px 25px;
+    }
+    .default-content{
+        grid-template-columns: 1fr;
+    }
+}

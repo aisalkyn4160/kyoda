@@ -1,16 +1,43 @@
-// const header = document.querySelector(".header");
-// const burger = document.querySelector(".burger");
+const header = document.querySelector(".header");
+const burger = document.querySelector(".header-burger");
 
 
-// burger.addEventListener("click", () => {
-//     header.classList.toggle("mobile-header");
-//     if (header.classList.contains("mobile-header")) {
-//         document.body.classList.add("no-scroll");
-//     } else {
-//         document.body.classList.remove("no-scroll");
-//     }
-// })
+burger.addEventListener("click", () => {
+    header.classList.toggle("mobile-header");
+    if (header.classList.contains("mobile-header")) {
+        document.body.classList.add("no-scroll");
+    } else {
+        document.body.classList.remove("no-scroll");
+    }
+})
 
+
+const mobCatalogBtn = document.querySelector('.mobile-catalog-btn')
+const mobSubMenu = document.querySelector('.mobile-sub-menu')
+const closeBtn = document.querySelector('.close-btn')
+
+
+mobCatalogBtn.addEventListener('click', () =>{
+    mobSubMenu.style.left = '0'
+})
+
+closeBtn.addEventListener('click', ()=>{
+    mobSubMenu.style.left= '-100%'
+    
+})
+
+const hasMenu = document.querySelector('.mobile-sub-menu .has-menu')
+const mobItemSubmenu = document.querySelector('.mobile-item-sub-menu')
+const closeArrow = document.querySelector('.close-arrow')
+
+hasMenu.addEventListener('click', (e) =>{
+    e.preventDefault();
+     mobItemSubmenu.style.left = '0'
+})
+
+closeArrow.addEventListener('click', ()=>{
+    mobItemSubmenu.style.left = '-100%'
+})
 // ----------------------------------popup--------------------------------
 const popup = document.querySelector('.popup')
 const popupShowBtns = document.querySelectorAll('.show-popup')
@@ -43,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu2 = document.querySelector('.nav-menu2');
     const body = document.body;
 
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        navMenu1.classList.toggle('active');
-        navMenu2.classList.toggle('active');
-        body.classList.toggle('no-scroll');
-    });
+    // burger.addEventListener('click', () => {
+    //     burger.classList.toggle('active');
+    //     navMenu1.classList.toggle('active');
+    //     navMenu2.classList.toggle('active');
+    //     body.classList.toggle('no-scroll');
+    // });
 
     // Закрытие меню при клике на ссылку
     const menuLinks = document.querySelectorAll('.nav-menu a');
@@ -158,9 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const productTopSwiper = new Swiper(".product-top-swiper", {
         spaceBetween: 10,
+        pagination: {
+            el: ".product-swiper-pagination",
+        },
         thumbs: {
             swiper: productBottomSwiper,
         },
+
+        
     });
 
 

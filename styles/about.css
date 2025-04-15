@@ -1,6 +1,5 @@
 .about .banner{
     padding: 150px 0;
-    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
     /* margin-top: -100px; */
@@ -117,15 +116,41 @@
 .about_map-content{
     max-width: 495px;
     margin-left: auto;
+    position: relative;
+    z-index: 1;
 }
 .about_map-content p{
     color: #343434;
 }
 .about_map-img{
     max-width: 1920px;
-    margin: -175px auto 0;
+    margin: -10% auto 0;
     width: 100%;
 }
 .about_map-img img{
     width: 100%;
+}
+
+@media (max-width: 1050px) {
+    .about_map-img{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .about .banner{
+        padding: 90px 0 160px;
+        min-height: unset;
+    }
+    .banner-list ul{
+        grid-template-columns: 1fr;
+        font-size: 18px;
+    }
+
+    .about_map{
+        padding-top: 80px;
+    }
+    .about_map h2{
+        font-size: 32px;
+    }
 }

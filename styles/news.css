@@ -102,6 +102,15 @@
     fill: #FF6701;
 }
 
+@media (max-width: 767px) {
+    /* --------------------------news-page --------------------------------*/
+    .news-items{
+        grid-template-columns: 1fr;
+    }
+    .news-options{
+        display: none;
+    }
+}
 
 @media (max-width: 550px) {
     .news{
@@ -130,4 +139,6 @@
     .news-btn-next{
         display: none;
     }
+
+    
 }

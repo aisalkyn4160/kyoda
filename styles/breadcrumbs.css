@@ -1,11 +1,15 @@
 .breadcrumbs{
-    display: flex;
+    display: inline-block;
     align-items: center;
     gap: 16px;
     margin-bottom: 24px;
     margin-top: 90px;
     font-weight: 500;
     color: rgba(29, 29, 29,.7);
+}
+.breadcrumbs span{
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .breadcrumbs a.active{
     color: rgba(255, 103, 1, 1);

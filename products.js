@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 })
 
+// ------------------------sort-------------------------------------------
 const nameSorter = document.querySelector('.name-sorter')
 const nameSorterUp = document.getElementById('name-sorter-arrow-up')
 const nameSorterDown = document.getElementById('name-sorter-arrow-down')
@@ -255,3 +256,14 @@ function updateProductsList(sorterProducts) {
         productList.appendChild(item);
     });
 }
+
+
+// ---------------------------------------------mobile-filter--------------------------------------------
+
+const mobileFilter = document.querySelector('.products_content-filter')
+const mobileFilterBtn = document.querySelector('.products-filter_btn')
+
+mobileFilterBtn.addEventListener('click', () => {
+    mobileFilter.classList.toggle('active')
+})
+

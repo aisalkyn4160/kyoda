@@ -3,7 +3,7 @@
     color: #fff;
     padding: 60px 50px 60px;
     display: grid;
-    grid-template-columns: 63% 43%;
+    grid-template-columns: 60% 410px;
     margin: 145px auto;
 }
 .feedback  p{
@@ -23,6 +23,7 @@
 }
 .form-checkbox{
     display: inline-flex;
+    align-items: center;
     gap: 12px;
 }
 .checkbox{
@@ -54,4 +55,45 @@
 }
 .feedback-img{
     margin-top: -125px;
+}
+
+.feedback-img img{
+    width: 100%;
+   
+}
+
+@media (max-width: 1050px) {
+    .feedback{
+        grid-template-columns: 50% 1fr;
+    }
+    .form-inputs{
+        grid-template-columns: 1fr;
+    }
+    .feedback-img{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 900px) {
+    .feedback{
+        grid-template-columns: 100%;
+        margin: 50px auto;
+    }
+    .feedback-img{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .feedback{
+        padding: 50px 15px;
+    }
+
+    .feedback p{
+        margin-bottom: 20px;
+    }
+    .feedback p br{
+        display: none;
+    }
+    
 }

@@ -84,6 +84,9 @@
     .banner{
         padding-bottom: 0;
     }
+    .banner_info{
+        padding-right: 15px;
+    }
     .banner_info p{
         font-size: 18px;
     }
