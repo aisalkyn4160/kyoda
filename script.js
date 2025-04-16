@@ -1,42 +1,44 @@
-const header = document.querySelector(".header");
-const burger = document.querySelector(".header-burger");
+document.addEventListener('DOMContentLoaded', ()=>{
+    const header = document.querySelector(".header");
+    const burger = document.querySelector(".header-burger");
 
 
-burger.addEventListener("click", () => {
-    header.classList.toggle("mobile-header");
-    if (header.classList.contains("mobile-header")) {
-        document.body.classList.add("no-scroll");
-    } else {
-        document.body.classList.remove("no-scroll");
-    }
-})
+    burger.addEventListener("click", () => {
+        header.classList.toggle("mobile-header");
+        if (header.classList.contains("mobile-header")) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    })
 
 
-const mobCatalogBtn = document.querySelector('.mobile-catalog-btn')
-const mobSubMenu = document.querySelector('.mobile-sub-menu')
-const closeBtn = document.querySelector('.close-btn')
+    const mobCatalogBtn = document.querySelector('.mobile-catalog-btn')
+    const mobSubMenu = document.querySelector('.mobile-sub-menu')
+    const closeBtn = document.querySelector('.close-btn')
 
 
-mobCatalogBtn.addEventListener('click', () =>{
-    mobSubMenu.style.left = '0'
-})
+    mobCatalogBtn.addEventListener('click', () =>{
+        mobSubMenu.style.left = '0'
+    })
 
-closeBtn.addEventListener('click', ()=>{
-    mobSubMenu.style.left= '-100%'
-    
-})
+    closeBtn.addEventListener('click', ()=>{
+        mobSubMenu.style.left= '-100%'
 
-const hasMenu = document.querySelector('.mobile-sub-menu .has-menu')
-const mobItemSubmenu = document.querySelector('.mobile-item-sub-menu')
-const closeArrow = document.querySelector('.close-arrow')
+    })
 
-hasMenu.addEventListener('click', (e) =>{
-    e.preventDefault();
-     mobItemSubmenu.style.left = '0'
-})
+    const hasMenu = document.querySelector('.mobile-sub-menu .has-menu')
+    const mobItemSubmenu = document.querySelector('.mobile-item-sub-menu')
+    const closeArrow = document.querySelector('.close-arrow')
 
-closeArrow.addEventListener('click', ()=>{
-    mobItemSubmenu.style.left = '-100%'
+    hasMenu.addEventListener('click', (e) =>{
+        e.preventDefault();
+        mobItemSubmenu.style.left = '0'
+    })
+
+    closeArrow.addEventListener('click', ()=>{
+        mobItemSubmenu.style.left = '-100%'
+    })
 })
 // ----------------------------------popup--------------------------------
 const popup = document.querySelector('.popup')
@@ -100,34 +102,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
         const accordionItem = button.parentElement;
         const accordionContent = accordionItem.querySelector('.accordion-content');
-
-
-
-        // if (accordionItem.classList.contains('active')) {
-        //     return;
-        // }
-
-        // document.querySelectorAll('.accordion-item').forEach(item => {
-        //     item.classList.remove('active');
-        //     const content = item.querySelector('.accordion-content');
-        //     content.style.maxHeight = "0";
-        // });
-
         accordionItem.classList.toggle('active');
         if(accordionItem.classList.contains('active')){
             accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
         }else{
             accordionContent.style.maxHeight = '0';
-
         }
-
-
     });
 });
 
+if(window.innerWidth <= 550){
+    document.querySelectorAll('.footer-accordion-header').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault()
+            const accordionItem = button.parentElement;
+            const accordionContent = accordionItem.querySelector('.footer-accordion-content');
+            accordionItem.classList.toggle('active');
+            if(accordionItem.classList.contains('active')){
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+            }else{
+                accordionContent.style.maxHeight = '0';
+            }
+        });
+    });
+}
 document.addEventListener('DOMContentLoaded', () => {
     const newsSlider = new Swiper('.news-swiper', {
         slidesPerView: 3,
