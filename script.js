@@ -72,14 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu2 = document.querySelector('.nav-menu2');
     const body = document.body;
 
-    // burger.addEventListener('click', () => {
-    //     burger.classList.toggle('active');
-    //     navMenu1.classList.toggle('active');
-    //     navMenu2.classList.toggle('active');
-    //     body.classList.toggle('no-scroll');
-    // });
-
-    // Закрытие меню при клике на ссылку
     const menuLinks = document.querySelectorAll('.nav-menu a');
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -89,16 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('no-scroll');
         });
     });
-
-    // Аккордеон (оставляем существующий код)
-    // const firstAccordionItem = document.querySelector('.accordion-item');
-    // if (firstAccordionItem) {
-    //     const firstAccordionContent = firstAccordionItem.querySelector('.accordion-content');
-    //     firstAccordionItem.classList.add('active');
-    //     firstAccordionContent.style.maxHeight = firstAccordionContent.scrollHeight + "px";
-    // }
-
-
 });
 
 document.querySelectorAll('.accordion-header').forEach(button => {
@@ -217,6 +199,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
     });
+
+
+    const tabLinks = document.querySelectorAll('.tab-btn');
+    const tabs = document.querySelectorAll('.tab');
+
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('dgdg')
+            const target = document.querySelector(this.getAttribute('href'));
+
+            tabLinks.forEach(link => link.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            this.classList.add('active');
+            target.classList.add('active');
+        });
+    });
+
+
 
 });
 

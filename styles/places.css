@@ -8,8 +8,11 @@
     height: 100%;
     overflow: hidden;
 }
+.mobile-places_addresses{
+    display: none;
+}
 .dealers{
-    height: 500px;
+    height: 50vh;
     overflow-y: scroll;
 }
 .dealers-header{
@@ -40,7 +43,7 @@
     color: #FFC59E;
 }
 .online-stores{
-    height: calc(100vh - 500px);
+    height: 50vh;
     overflow-y: scroll;
 }
 .online-stores_head{
@@ -69,4 +72,104 @@
 }
 .online-stores_item div{
     margin-bottom: 16px;
+}
+.places_map{
+    min-height: 660px;
+    position: relative;
+}
+.places_map-btns{
+    padding: 8px 24px 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+.places_map-btns a{
+    color: #FFC59E;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: 0;
+    border-bottom: 1px dashed #FFC59E;
+    white-space: nowrap;
+}
+.places_map-btns a.active{
+    color: #FF6701;
+    border-bottom-color: #FF6701;
+}
+@media (max-width: 1230px) {
+    .places{
+        grid-template-columns: 360px 1fr;
+    }
+    .dealers-item{
+        padding: 24px 15px 0;
+    }
+    .online-stores_item{
+        padding: 24px 15px;
+    }
+    .online-stores_head{
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .places{
+        height: auto;
+        overflow: visible;
+        grid-template-columns: 1fr;
+    }
+    .places-left{
+        height: auto;
+        overflow: visible;
+    }
+    .places_addresses{
+        display: none;
+    }
+    .mobile-places_addresses{
+        display: block;
+    }
+    .tab-btn{
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0;
+        color: #FF6701;
+        transition: .3s ease;
+    }
+    .tab-btn.active{
+        background-color: #FF6701;
+        color: #FFFFFF;
+    }
+    .tab-btn.active svg path{
+        fill: #FFFFFF;
+    }
+    .tab-content {
+        width: 100%;
+    }
+
+    .tab {
+        display: none;
+
+    }
+    .tab.active {
+        display: block;
+
+    }
+    .dealers,
+    .online-stores{
+        height: auto;
+        overflow: visible;
+    }
+    .dealers-item:first-child{
+        padding-bottom: 32px;
+    }
 }

@@ -161,10 +161,10 @@ li:not(:last-child) {
         display: block;
     }
     .footer h5{
-        /*width: 100%;*/
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
     }
     .footer-accordion-item{
         overflow: hidden;
