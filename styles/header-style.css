@@ -82,6 +82,9 @@
 	padding: 20px;
 	background-color: rgba(0, 0, 0, 0.5);
 }
+.page-content .sub-menu{
+	top: 72px;
+}
 .sub-menu >ul{
 	max-width: 1200px;
 	margin: 0 auto;
