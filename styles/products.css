@@ -227,11 +227,13 @@
     flex-direction: column;
     gap: 12px;
     max-height: 0;
+    opacity: 0;
     visibility: hidden;
     transition: max-height .3s ease;
 }
 .accordion-item.active .accordion-content{
     visibility: visible;
+    opacity: 1;
     margin-bottom: 32px;
 }
 .accordion-content label{

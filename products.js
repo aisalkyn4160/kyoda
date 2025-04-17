@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Получаем элементы
+    // ползунок цен
     const slider = document.getElementById('price-range');
     const minInput = document.querySelector('.min-price');
     const maxInput = document.querySelector('.max-price');
     
-    // Создаем слайдер
     noUiSlider.create(slider, {
         start: [200, 35999],
         connect: true,
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Обновляем инпуты при движении слайдера
     slider.noUiSlider.on('update', function(values, handle) {
         if (handle === 0) {
             minInput.value = values[0];
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Обновляем слайдер при изменении инпутов
+  
     minInput.addEventListener('change', function() {
         slider.noUiSlider.set([this.value, null]);
     });
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// -----------pagination
+//пагинация для продуктов
 document.addEventListener('DOMContentLoaded', function(){
     const paginationNumbers = document.getElementById("pagination-numbers");
     const paginatedList = document.getElementById("products-list");
@@ -162,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 })
 
-// ------------------------sort-------------------------------------------
+// сортировка продуктов
 const nameSorter = document.querySelector('.name-sorter')
 const nameSorterUp = document.getElementById('name-sorter-arrow-up')
 const nameSorterDown = document.getElementById('name-sorter-arrow-down')
@@ -182,7 +180,7 @@ nameSorterUp.addEventListener('click', () => {
     nameSorterUp.classList.add('clicked');
     nameSorterDown.classList.remove('clicked');
     nameSorter.classList.add('clicked')
-    // nameSorterUp.parentNode.parentNode.style.color = '#FF6701';
+    
 
     listItems.sort((a, b) => {
         const nameA = a.querySelector('.products-item__title').textContent.toLowerCase();
@@ -258,7 +256,7 @@ function updateProductsList(sorterProducts) {
 }
 
 
-// ---------------------------------------------mobile-filter--------------------------------------------
+// мобильный фильтр
 
 const mobileFilter = document.querySelector('.products_content-filter')
 const mobileFilterBtn = document.querySelector('.products-filter_btn')

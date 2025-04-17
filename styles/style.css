@@ -15,8 +15,11 @@
 @import url('prices-style.css');
 @import url('footer-style.css');
 
+/* подключение шрифтов */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-/* -------------------------------------------reset-styles------------------------------------------- */
+
+
+/* обнуление стилей */
 *{
     margin: 0;
     padding: 0;
@@ -58,7 +61,7 @@ ul li{list-style-type: none;}
 
 h1,h2, h3, h4, h5, h6{font-style: inherit;}
 
-/* -------------------------------------------main-styles------------------------------------------- */
+/* общие стили */
 html{
 	scroll-behavior: smooth;
 }
@@ -95,7 +98,6 @@ footer{
 	max-width: 1230px;
 	margin: 0 auto;
 	padding: 0 15px;
-	border: 1px solid red;
 }
 
 h1{
@@ -175,6 +177,9 @@ p {
     color: #FF6701 !important;
     background: transparent;
 }
+
+
+/* стиль слайдера */
 .swiper{
     height: auto;
 }
@@ -205,6 +210,8 @@ p {
     height: 24px;
 }
 
+
+/* стиль модального окна */
 .popup{
     position: fixed;
     width: 100%;

@@ -1,3 +1,4 @@
+/* отзывы */
 .reviews{
     padding: 120px 0;
     position:relative;
@@ -47,6 +48,55 @@
     margin-bottom: 24px;
 }
 
+.review-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.review-modal-content {
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.review-modal-header {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.review-modal-close {
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FF6701;
+}
+
+.review-modal-date {
+    color: #7A7A7A;
+    margin-bottom: 8px;
+}
+
+.review-modal-body p {
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
 @media (max-width: 550px) {
     .reviews{
         position: relative;
@@ -73,5 +123,8 @@
     .reviews-btn-prev,
     .reviews-btn-next{
         display: none;
+    }
+    .review-modal-content {
+        width: 95%;
     }
 }
