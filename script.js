@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     })
 
-ё// выпадающее меню
+// выпадающее меню
     const hasMenu = document.querySelector('.mobile-sub-menu .has-menu')
     const mobItemSubmenu = document.querySelector('.mobile-item-sub-menu')
     const closeArrow = document.querySelector('.close-arrow')
@@ -263,3 +263,39 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 });
+
+
+// анимация шагов истории компании
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const stepLogo = document.querySelector('.step-logo');
+    const stepLogoPaths = stepLogo.querySelectorAll('path');
+    console.log(stepLogoPaths)
+    const containBlock = document.querySelector('.contain');
+    const steps = document.querySelectorAll('.step');
+
+    if (stepLogo && containBlock && steps.length) {
+        const handleScroll = () => {
+            const containRect = containBlock.getBoundingClientRect();
+
+            if (containRect.top < window.innerHeight && containRect.bottom > 0) {
+                steps.forEach((step, index) => {
+                    const stepRect = step.getBoundingClientRect();
+                    const stepTop = stepRect.top - containRect.top; 
+
+                    if (stepRect.top < window.innerHeight * 0.7 && stepRect.bottom > window.innerHeight * 0.3) {
+                        stepLogo.style.opacity = '1';
+                        stepLogo.style.transform = `translateY(${stepTop + 50}px)`;
+
+                        stepLogoPaths.forEach((path) => {
+                            path.style.fill = `url(#gradient${index + 1})`;
+                        })
+                    }
+                });
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
+})

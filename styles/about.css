@@ -48,18 +48,36 @@
     padding-left: 190px;
     position: relative;
 }
-.history-logo {
-    position: sticky;
-    left: -190px;
-    margin-left: -190px;
-    bottom: 200px;
-    top: 135px;
+.step-logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180px;
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.3s ease;
+    will-change: transform;
+    /*margin-left: -190px;*/
+}
+.history-logo-wrap{
+    position: relative;
     width: 180px;
 
+}
+.history-logo-wrap img{
+    position: absolute;
+    top: 18px;
+    left: 43px;
+    width: 22px;
+    height: 29px;
+}
+.history-logo {
+    width: 180px;
+    height: 59px;
 }
 .history-logo path{
     fill: url(#gradient);
 }
+
 .step {
     padding: 60px 0px;
     display: flex;
@@ -174,6 +192,9 @@
 @media (max-width: 900px) {
     .contain{
         padding-left: 0;
+    }
+    .step-logo{
+        display: none;
     }
 }
 @media (max-width: 600px) {

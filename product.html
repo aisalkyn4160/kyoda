@@ -271,18 +271,23 @@
                             <div class="swiper product-top-swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
+                                        <div class="magnifier"></div>
                                         <img src="assets/imgs/image%2055.png" alt="" id="image">
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="magnifier"></div>
                                         <img src="assets/imgs/img1.png" alt="">
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="magnifier"></div>
                                         <img src="assets/imgs/img2.png" alt="">
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="magnifier"></div>
                                         <img src="assets/imgs/img3.png" alt="">
                                     </div>
                                     <div class="swiper-slide">
+                                        <div class="magnifier"></div>
                                         <img src="assets/imgs/img2.png" alt="">
                                     </div>
                                 </div>
@@ -386,9 +391,16 @@
                                550 руб/шт
                            </div>
                            <div class="product-video">
-                               <video autoplay muted>
+                               <video id="product-video">
                                    <source src="assets/videos/product-viedo.mp4" type="video/mp4">
                                </video>
+                               <div class="custom-controls">
+                                   <button class="play-btn">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
+                                           <path d="M13.1367 7.634C13.8034 8.0189 13.8034 8.98115 13.1367 9.36605L1.84127 15.8875C1.1746 16.2724 0.341265 15.7913 0.341265 15.0215V1.9786C0.341265 1.2088 1.1746 0.72767 1.84126 1.11257L13.1367 7.634Z" fill="white"/>
+                                       </svg>
+                                   </button>
+                               </div>
                            </div>
                        </div>
                        <div class="product-content_bottom">
@@ -554,7 +566,7 @@
         </div>
     </div>
 
-
+    <script src="product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
